@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fancy Form</title>
+
+  <!-- You may add more stuff here -->
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
+  <form id="exchangeForm">
+    <h4>SWAP</h4>
+    <label for="input-amount">Exchange amount:</label>
+    <input type="number" id="input-amount" name="input-amount" required><br><br>
+    
+    <label for="fromCurrency">From Currency:</label>
+    <select id="fromCurrency" name="fromCurrency" required>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+    </select><br><br>
+    
+    <label for="toCurrency">To Currency:</label>
+    <select id="toCurrency" name="toCurrency" required>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+    </select><br><br>
+    
+    <label for="output-amount">Amount to receive:</label><br>
+    <div id="output-amount"></div><br>
+
+    <button type="submit">Calculate</button>
+</form>
+
+
+  <!-- <form onsubmit="return !1">
+    <h5>Swap</h5>
+    <label for="input-amount">Amount to send</label>
+    <input id="input-amount" />
+
+    <label for="output-amount">Amount to receive</label>
+    <input id="output-amount" />
+
+    <button>CONFIRM SWAP</button>
+  </form> -->
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+Có các vấn đề đang gặp phải như dưới 
+
+Sử dụng filter và sort trong useMemo: Trong useMemo, bạn sử dụng filter và sort để tính toán sortedBalances. Điều này có thể dẫn đến việc tính toán không cần thiết mỗi khi có sự thay đổi trong dependencies.
+
+Tính toán giá trị usdValue cho mỗi hàng trong sortedBalances: Trong mỗi vòng lặp, giá trị usdValue được tính toán lại dựa trên prices[balance.currency]. Điều này có thể dẫn đến tính toán không cần thiết nếu giá trị của balance.currency không thay đổi.
+
+Sử dụng useMemo không hiệu quả: Mặc dù bạn đã sử dụng useMemo, nhưng nó không được tối ưu hóa hoàn toàn vì các tính toán phức tạp vẫn được thực hiện trong callback của nó.
